@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #E5E5E5;
+    background-color: #F4F4F4;
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
@@ -19,7 +19,8 @@ img {
 }
 
 .row {
-
+    display: flex;
+    justify-content: space-between;
 }
 
 .main {
@@ -127,4 +128,102 @@ img {
 .card__address {
     font-size: 14px;
     color: #777777;
+}
+
+
+/* Button more */
+
+.btn-more {
+    font-family: inherit;
+    width: 100%;
+    height: 80px;
+    background-color: #E5E5E5;
+    border-radius: 4px;
+    color: #4290C9;
+    border: none;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 21px;
+    transition: all 0.2s ease-in;
+}
+
+.btn-more:hover {
+    background-color: #dcdcdc;
+    cursor: pointer;
+}
+
+.btn-more img {
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+
+/* Widget */
+
+.widget {
+
+}
+
+.widget__title {
+    position: relative;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.16;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.widget__title::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url("./../img/icons/Shape.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.widget__body {
+
+}
+
+.distance {
+    border: 1px solid #D6D6D6;
+    border-radius: 4px;
+}
+
+.distance__row {
+    display: flex;
+}
+
+.distance__row:last-child {
+    border-top: 1px solid #D6D6D6;
+}
+
+.distance__btn {
+    flex-grow: 1;
+    height: 50px;
+    padding: 0 15px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #3C3C3C;;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.distance__btn:last-child {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.distance__btn--active {
+    background-color: #FFCF26;
 }
