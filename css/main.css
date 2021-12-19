@@ -224,6 +224,14 @@ img {
     line-height: 19px;
 }
 
+.distance__btn:hover {
+    background-color: #ffe798;
+}
+
 .distance__btn--active {
     background-color: #FFCF26;
+}
+
+.distance__btn--active:hover {
+    background-color: #f4c430;
 }
