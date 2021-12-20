@@ -211,23 +211,100 @@
                 <div class="widget__body">
                     <div class="distance">
                         <div class="distance__row">
-                            <label for="distance-01" class="distance__btn distance__btn--active">&lt; 10</label>
-                            <input type="checkbox" id="distance-01" checked>
+                            <input type="checkbox" id="distance-01" class="distance__checkbox" checked>
+                            <label for="distance-01" class="distance__btn">&lt; 10</label>
 
-                            <label for="distance-02" class="distance__btn distance__btn--active">10-20</label>
-                            <input type="checkbox" id="distance-02" checked>
+                            <input type="checkbox" id="distance-02" class="distance__checkbox" checked>
+                            <label for="distance-02" class="distance__btn">10-20</label>
 
+                            <input type="checkbox" id="distance-03" class="distance__checkbox">
                             <label for="distance-03" class="distance__btn">20-30</label>
-                            <input type="checkbox" id="distance-03">
 
+                            <input type="checkbox" id="distance-04" class="distance__checkbox">
                             <label for="distance-04" class="distance__btn">30+</label>
-                            <input type="checkbox" id="distance-04">
                         </div>
                         <div class="distance__row">
+                            <input type="checkbox" id="distance-05" class="distance__checkbox">
                             <label for="distance-05" class="distance__btn">Любая</label>
-                            <input type="checkbox" id="distance-05">
                         </div>
                     </div>
+                </div>
+            </div>
+            <!-- //Widget -->
+
+            <!-- Widget -->
+            <div class="widget">
+                <div class="widget__title">
+                    Срок сдачи
+                </div>
+                <div class="widget__body">
+                    <!-- Radio -->
+                    <label class="radio">
+                        <input type="radio" class="radio__real" checked name="deadline">
+                        <span class="radio__fake"></span>
+                        <span class="radio__title">Любой</span>
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" class="radio__real" name="deadline">
+                        <span class="radio__fake"></span>
+                        <span class="radio__title">Сдан</span>
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" class="radio__real" name="deadline">
+                        <span class="radio__fake"></span>
+                        <span class="radio__title">В этом году</span>
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" class="radio__real" name="deadline">
+                        <span class="radio__fake"></span>
+                        <span class="radio__title">В следующем году</span>
+                    </label>
+                    <!-- //Radio -->
+                </div>
+            </div>
+            <!-- //Widget -->
+
+            <!-- Widget -->
+            <div class="widget">
+                <div class="widget__title">
+                    Дополнительные опции
+                </div>
+                <div class="widget__body">
+                    <!-- Radio -->
+                    <label class="additional-options">
+                        <input type="checkbox" class="additional-options__real" checked name="additional-options">
+                        <span class="additional-options__fake"></span>
+                        <span class="additional-options__title">Двор без машин</span>
+                    </label>
+
+                    <label class="additional-options">
+                        <input type="checkbox" class="additional-options__real">
+                        <span class="additional-options__fake"></span>
+                        <span class="additional-options__title">Высокие потолки</span>
+                    </label>
+
+                    <label class="additional-options">
+                        <input type="checkbox" class="additional-options__real">
+                        <span class="additional-options__fake"></span>
+                        <span class="additional-options__title">Панорамные окна</span>
+                    </label>
+
+                    <label class="additional-options">
+                        <input type="checkbox" class="additional-options__real">
+                        <span class="additional-options__fake"></span>
+                        <span class="additional-options__title">Есть кладовые</span>
+                    </label>
+
+                    <label class="additional-options">
+                        <input type="checkbox" class="additional-options__real">
+                        <span class="additional-options__fake"></span>
+                        <span class="additional-options__title">Малоэтажный</span>
+                    </label>
+                    <button class="additional__btn-more">Показать ещё</button>
+                    <!-- //Radio -->
                 </div>
             </div>
             <!-- //Widget -->

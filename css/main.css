@@ -163,16 +163,20 @@ img {
 /* Widget */
 
 .widget {
-
+    margin-bottom: 33px;
 }
 
 .widget__title {
+    height: 24px;
+    vertical-align: bottom;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
     position: relative;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 18px;
     line-height: 1.16;
     color: #000;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
 }
 
 .widget__title::after {
@@ -191,6 +195,8 @@ img {
 
 }
 
+/* Distance */
+
 .distance {
     border: 1px solid #D6D6D6;
     border-radius: 4px;
@@ -205,13 +211,15 @@ img {
 }
 
 .distance__btn {
+    display: flex;
     flex-grow: 1;
-    height: 50px;
-    padding: 0 15px;
-    text-align: center;
+    height: 48px;
+    padding: 0 6px;
+    justify-content: center;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1;
     color: #3C3C3C;;
     background-color: transparent;
     border: none;
@@ -219,7 +227,7 @@ img {
     font-family: inherit;
 }
 
-.distance__btn:last-child {
+.distance__row:last-child .distance__btn {
     font-size: 16px;
     line-height: 19px;
 }
@@ -228,10 +236,150 @@ img {
     background-color: #ffe798;
 }
 
-.distance__btn--active {
+.distance__checkbox {
+    display: none;
+}
+
+.distance__checkbox:checked + .distance__btn {
     background-color: #FFCF26;
 }
 
-.distance__btn--active:hover {
+.distance__checkbox:checked + .distance__btn:hover {
     background-color: #f4c430;
 }
+
+/* //Distance */
+
+/* Radio */
+
+.radio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.radio:hover {
+    cursor: pointer;
+}
+
+.radio__real {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    opacity: 0;
+    appearance: none;
+}
+
+.radio__fake {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: 1px solid #777777;
+    margin-right: 10px;
+}
+
+.radio__real:checked + .radio__fake {
+    background-color: #FFE074;
+}
+
+.radio__real:checked + .radio__fake::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    content: "";
+    transform: translate(-50%, -50%);
+    background-color: #3C3C3C;
+    border-radius: 50%;
+}
+
+.radio__title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18;
+    color: #3C3C3C;
+}
+
+.radio__real:checked ~ .radio__title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Additional options */
+.additional-options {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.additional-options:hover {
+    cursor: pointer;
+}
+
+.additional-options__real {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    opacity: 0;
+    appearance: none;
+}
+
+.additional-options__fake {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #777777;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+
+.additional-options__real:checked + .additional-options__fake {
+    background-color: #FFE074;
+}
+
+.additional-options__real:checked + .additional-options__fake::before {
+    content: "";
+    width: 18px;
+    height: 14px;
+    background-image: url("./../img/icons/check.svg");
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.additional-options__title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18;
+    color: #3C3C3C;
+}
+
+.additional-options__real:checked ~ .additional-options__title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.additional__btn-more {
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.18;
+    color: #4290C9;
+    border: none;
+    background-color: transparent;
+}
+
+.additional__btn-more:hover {
+    cursor: pointer;
+}
+
