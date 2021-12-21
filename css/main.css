@@ -38,6 +38,8 @@ img {
     padding: 0;
     border: none;
     background-color: transparent;
+    outline: none;
+    cursor: pointer;
 }
 
 .menu-icon {
@@ -416,6 +418,10 @@ img {
     cursor: pointer;
 }
 
+.additional-options[data-option-hidden='hidden'] {
+    display: none;
+}
+
 .additional-options__real {
     width: 1px;
     height: 1px;
@@ -464,11 +470,7 @@ img {
     font-weight: 500;
 }
 
-.widget__hidden {
-    display: none;
-}
-
-.widget__show-hidden {
+.widget__btn-show-hidden {
     padding: 0;
     font-family: Roboto, sans-serif;
     font-style: normal;
@@ -479,9 +481,10 @@ img {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    outline: none;
 }
 
-.widget__show-hidden:hover {
+.widget__btn-show-hidden:hover {
     text-decoration: underline;
 }
 

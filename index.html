@@ -279,10 +279,10 @@
                     <div class="widget__body">
                         <div class="distance">
                             <div class="distance__row">
-                                <input type="checkbox" id="distance-01" class="distance__checkbox" name="distance-01" checked>
+                                <input type="checkbox" id="distance-01" class="distance__checkbox" name="distance-01">
                                 <label for="distance-01" class="distance__btn">&lt; 10</label>
 
-                                <input type="checkbox" id="distance-02" class="distance__checkbox" name="distance-02" checked>
+                                <input type="checkbox" id="distance-02" class="distance__checkbox" name="distance-02">
                                 <label for="distance-02" class="distance__btn">10-20</label>
 
                                 <input type="checkbox" id="distance-03" class="distance__checkbox" name="distance-03">
@@ -292,7 +292,8 @@
                                 <label for="distance-04" class="distance__btn">30+</label>
                             </div>
                             <div class="distance__row">
-                                <input type="checkbox" id="distance-05" class="distance__checkbox" name="distance-05">
+                                <input type="checkbox" id="distance-05" class="distance__checkbox" checked
+                                       name="distance-05">
                                 <label for="distance-05" class="distance__btn">Любая</label>
                             </div>
                         </div>
@@ -343,7 +344,7 @@
                     <div class="widget__body">
                         <!-- Radio -->
                         <label class="additional-options">
-                            <input type="checkbox" class="additional-options__real" checked name="options-01">
+                            <input type="checkbox" class="additional-options__real" name="options-01">
                             <span class="additional-options__fake"></span>
                             <span class="additional-options__title">Двор без машин</span>
                         </label>
@@ -372,29 +373,27 @@
                             <span class="additional-options__title">Малоэтажный</span>
                         </label>
 
-                        <div class="widget__hidden">
-                            <label class="additional-options">
-                                <input type="checkbox" class="additional-options__real" name="options-06">
-                                <span class="additional-options__fake"></span>
-                                <span class="additional-options__title">Дополнительный пункт1</span>
-                            </label>
+                        <label class="additional-options" data-option-hidden="hidden">
+                            <input type="checkbox" class="additional-options__real" name="options-06">
+                            <span class="additional-options__fake"></span>
+                            <span class="additional-options__title">Дополнительный пункт1</span>
+                        </label>
 
-                            <label class="additional-options">
-                                <input type="checkbox" class="additional-options__real" name="options-07">
-                                <span class="additional-options__fake"></span>
-                                <span class="additional-options__title">Дополнительный пункт2</span>
-                            </label>
+                        <label class="additional-options" data-option-hidden="hidden">
+                            <input type="checkbox" class="additional-options__real" name="options-07">
+                            <span class="additional-options__fake"></span>
+                            <span class="additional-options__title">Дополнительный пункт2</span>
+                        </label>
 
-                            <label class="additional-options">
-                                <input type="checkbox" class="additional-options__real" name="options-08">
-                                <span class="additional-options__fake"></span>
-                                <span class="additional-options__title">Дополнительный пункт3</span>
-                            </label>
+                        <label class="additional-options" data-option-hidden="hidden">
+                            <input type="checkbox" class="additional-options__real" name="options-08">
+                            <span class="additional-options__fake"></span>
+                            <span class="additional-options__title">Дополнительный пункт3</span>
+                        </label>
                         </div>
 
-                        <button class="widget__show-hidden">Показать ещё</button>
+                        <button type="button" class="widget__btn-show-hidden">Показать ещё</button>
                         <!-- //Radio -->
-                    </div>
                 </div>
                 <!-- //Widget -->
 
@@ -416,7 +415,7 @@
                     <div class="widget__body">
                         <!-- Form buttons -->
                         <button class="form__btn form__btn--submit">Применить фильтры</button>
-                        <button class="form__btn">
+                        <button type="reset" class="form__btn">
                             <img src="./img/icons/x.svg" alt="">Сбросить фильтры</button>
                     </div>
                 </div>
