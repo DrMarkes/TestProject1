@@ -12,10 +12,91 @@ img {
     display: block;
 }
 
+/* Button Toggle Sidebar */
+.toggle-sidebar {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    top: 8px;
+    right: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(87, 147, 191, 0.75);
+    border: none;
+    border-radius: 4px;
+}
+
+.menu-icon-wrapper {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.menu-icon {
+    position: relative;
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    transition: background-color 0.2s ease-in;
+}
+
+.menu-icon::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    left: 0;
+    top: -10px;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+
+.menu-icon::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    left: 0;
+    top: 10px;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+
+.menu-icon--active {
+    background-color: transparent;
+    transition: background-color 0.2s ease-in;
+}
+
+.menu-icon--active::before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+.menu-icon--active::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+.sidebar.sidebar-mobile--active {
+    left: 0;
+    transition: left 0.2s ease-in;
+}
+
+/* Container */
 .container {
-    max-width: 1170px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 60px 15px;
 }
 
 .row {
@@ -24,11 +105,13 @@ img {
 }
 
 .main {
-    width: 870px;
+    max-width: 870px;
+    margin-right: 30px;
 }
 
 .sidebar {
-    width: 270px;
+    min-width: 200px;
+    max-width: 270px;
 }
 
 .card-holder {
@@ -38,7 +121,6 @@ img {
 }
 
 /* Card */
-
 .card-link {
     display: inline-block;
     text-decoration: none;
@@ -130,6 +212,9 @@ img {
     color: #777777;
 }
 
+.card-link.card-link--hidden {
+    display: none;
+}
 
 /* Button more */
 
@@ -158,6 +243,8 @@ img {
     margin-right: 10px;
 }
 
+/* Sidebar */
+
 /* Widget */
 
 .widget {
@@ -169,7 +256,8 @@ img {
 }
 
 .widget__title {
-    height: 24px;
+    padding-right: 20px;
+    min-height: 24px;
     vertical-align: bottom;
     font-family: Roboto, sans-serif;
     font-style: normal;
@@ -179,6 +267,7 @@ img {
     line-height: 1.16;
     color: #000;
     margin-bottom: 17px;
+    cursor: pointer;
 }
 
 .widget__title::after {
@@ -193,8 +282,12 @@ img {
     background-position: center;
 }
 
-.widget__body {
+.widget__title.widget__title--toggle::after {
+    transform: rotate(180deg);
+}
 
+.widget__body.widget__body--hidden {
+    display: none;
 }
 
 /* Distance */
@@ -487,3 +580,76 @@ img {
 .form__btn--submit:hover {
     background-color: #f4c430;
 }
+
+@media (max-width: 1129px) {
+    .container {
+        max-width: 900px;
+    }
+
+    .main {
+        max-width: 570px;
+    }
+}
+
+@media (max-width: 829px) {
+    .toggle-sidebar {
+        display: flex;
+    }
+
+    .container {
+        max-width: 600px;
+    }
+
+    .main {
+        margin-right: 0;
+    }
+
+    .sidebar {
+        width: 220px;
+        padding: 10px 10px 0;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -240px;
+        overflow-y: auto;
+        background-color: #ffffff;
+        box-shadow: 0 0 15px rgba(86, 79, 79, 0.78);
+        transition: left 0.2s ease-in;
+    }
+}
+
+@media (max-width: 599px) {
+    .main {
+        width: 100%;
+    }
+    .card-holder {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .card-link {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        display: flex;
+    }
+}
+
+@media (max-width: 459px) {
+    .container {
+        min-width: 300px;
+    }
+
+    .card-link {
+        width: initial;
+    }
+
+    .card {
+        width: 270px;
+        display: block;
+    }
+}
+
